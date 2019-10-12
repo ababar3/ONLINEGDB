@@ -1,0 +1,50 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+    int target = 10;
+    int complement = 0;
+
+    int[] intArray = new int[]{ 5, 3, 5};
+    int[] outputArray = new int[2];
+    HashMap<Integer, Integer> map= new HashMap<> ();
+
+    for(int i=0; i<intArray.length; i++){
+       
+        map.put(intArray[i],i);
+    }
+    for(int i=0; i<intArray.length; i++){
+        complement=target-intArray[i];
+        if(map.containsKey(complement)&& map.get(complement)!=i){
+            outputArray[0]=i;
+            outputArray[1]=map.get(complement);
+        }
+    }
+    System.out.println(map);
+    System.out.println(Arrays.toString(outputArray));
+
+
+}
+
+    //List<Integer> myList = new ArrayList<Integer>();
+    //for(int i=0; i<intArray.length; i++){
+    //  for(int j=i+1; j<intArray.length; j++){
+    //    if(intArray[i]+intArray[j]==target){
+    //      myList.add(i);
+    //    myList.add(j);
+    //  }
+    //   }
+    //}
+
+  
+}
