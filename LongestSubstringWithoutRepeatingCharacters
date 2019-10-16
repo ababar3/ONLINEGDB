@@ -1,0 +1,36 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+//LONGEST SUBSTRING WITHOUT REPEATING CHARACTER
+{
+  public static void main (String[]args)
+  {
+      String s= "arsalan";
+      int maxLength=0;
+      int i=0;
+      int j=0;
+      HashSet<Character>set= new HashSet<>();
+      while(j<s.length()){
+          if(!set.contains(s.charAt(j))){
+            set.add(s.charAt(j));
+            j++;
+            maxLength= Math.max(maxLength,j-i);
+
+          }
+          else{
+              set.remove(s.charAt(i));
+              i++;
+          }
+      }
+    System.out.println(maxLength);
+}
+}
+
